@@ -18,7 +18,7 @@ The program covers security vulnerabilities with clear, reproducible end-to-end 
 
 The following are out of scope unless Phala explicitly announces otherwise:
 
-- Legacy Phala Blockchain, parachain, runtime, pRuntime, pherry, and runtime-bridge components that are archived, sunset, deprecated, or no longer production-operated.
+- Legacy Phala Blockchain, parachain, runtime, pRuntime, pherry, runtime-bridge, and Phat Contract components that are archived, sunset, deprecated, or no longer production-operated.
 - Test, staging, demo, deprecated, parked, or otherwise non-production assets, even when hosted under Phala domains.
 - Third-party services, applications, or infrastructure not operated by Phala.
 - Findings without a clear, reproducible end-to-end production security impact.
