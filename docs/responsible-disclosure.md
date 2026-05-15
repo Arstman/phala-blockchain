@@ -1,33 +1,64 @@
 # Phala Network Responsible Disclosure
 
-At Phala Network, we consider the security of our systems a top priority. But no matter how much effort we put into system security, there can still be vulnerabilities present.
+At Phala Network, we take the security of our production systems seriously. If you believe you have found a security vulnerability in an in-scope Phala-operated asset, please report it to us so we can investigate and remediate it.
 
-If you discover a vulnerability, we would like to know about it so we can take steps to address it as quickly as possible. We would like to ask you to help us better protect our community and our systems.
+Submit reports by email to <cert@phala.network>. Please do not submit product bugs, feature requests, or issues without practical security impact through this program.
 
-We offer bug bounties for the accepted vulnerability reports. Please don't submit non-security bugs
-or feature requests as vulnerability reports. Instead, you can check out [Code Bounty Program](https://forum.phala.network/t/topic/2045).
+This Responsible Disclosure program, Bug Bounty program, scope, and listed rewards are subject to change at any time.
 
-This Responsible Disclosure program, Bug Bounty program, and any listed rewards are subject to change at any time.
+## In Scope
 
-## Please:
+The program covers security vulnerabilities with clear, reproducible end-to-end impact against production assets operated by Phala, including:
 
-- Make sure that your findings are actually a security vulnerability and within our infrastructure and/or code repositories. Missing or misconfigured SPF, DKIM, DANE, Headers, open directories, external code, etc. do NOT qualify in 99% of cases and will be denied. Vulnerabilities where you can access servers, execute code, etc. do qualify for report submission.
-- E-mail your findings to <cert@phala.network>.
-- Do not take advantage of the vulnerability or problem you have discovered, for example by downloading more data than necessary to demonstrate the vulnerability or deleting or modifying other people’s data,
-- Do not reveal the problem to others until it has been resolved,
-- Do not use attacks on physical security, social engineering, distributed denial of service, spam or applications of third parties, and
-- Do provide sufficient information to reproduce the problem, so we will be able to resolve it as quickly as possible. Usually, the IP address or the URL of the affected system and a description of the vulnerability will be sufficient, but complex vulnerabilities may require further explanation.
-- Consider if the found issue poses an actual security risk, and do not assume so because your scanner told you so.
+- Phala Cloud production services.
+- Active Phala-operated production web applications and APIs.
+- Other production assets that Phala explicitly announces as in scope.
 
-## What we promise
+## Out of Scope
 
-- We will respond to your report within 3 business days with our evaluation of the report and an expected resolution date,
-- If you have followed the instructions above, we will not take any legal action against you in regard to the report,
-- We will handle your report with strict confidentiality, and not pass on your personal details to third parties without your permission,
-- We will keep you informed of the progress towards resolving the problem,
-- We will inform you if we accepted your report as a found security issue or that we deny the report as the reported issue and/or Proof-of-Concept does not work.
-- In the public information concerning the problem reported, we will give your name as the discoverer of the problem (unless you desire otherwise), and
-- As a token of our gratitude for your assistance, we offer a reward for every report of a security problem that was not yet known to us. The type and/or amount of the reward will be determined based on the severity of the bug and the quality of the report.
+The following are out of scope unless Phala explicitly announces otherwise:
+
+- Legacy Phala Blockchain, parachain, runtime, pRuntime, pherry, runtime-bridge, and Phat Contract components that are archived, sunset, deprecated, or no longer production-operated.
+- Test, staging, demo, deprecated, parked, or otherwise non-production assets, even when hosted under Phala domains.
+- Third-party services, applications, or infrastructure not operated by Phala.
+- Findings without a clear, reproducible end-to-end production security impact.
+- Scanner-only findings, automated best-practice reports, or issues that do not include a practical exploit path.
+- SPF, DKIM, DMARC, DANE, security headers, clickjacking, CORS, open directories, or weak cipher findings without practical exploitability.
+- Open redirect or HTML injection findings without account compromise, sensitive-token leakage, or another demonstrated production impact.
+- Rate-limiting findings without practical abuse or material production impact.
+- Social engineering, spam, distributed denial of service, physical attacks, or attacks against Phala employees, users, vendors, or offices.
+- Duplicate reports, repeated submissions, or variants that require the same remediation as an existing report.
+
+## Reporting Requirements
+
+To help us evaluate your report, please include:
+
+- The affected production asset, such as the URL, API endpoint, or IP address.
+- A clear description of the vulnerability and its security impact.
+- Reproducible steps, proof of concept, screenshots, request/response samples, or logs sufficient for us to validate the issue.
+- Any limits or assumptions in your testing.
+
+A report qualifies for bounty consideration only when it demonstrates clear, reproducible end-to-end impact in production on an in-scope asset.
+
+## Researcher Rules
+
+When testing and reporting, please:
+
+- Do not access, download, modify, delete, or disclose data beyond what is necessary to demonstrate the vulnerability.
+- Do not interrupt, degrade, or deny service to Phala systems or users.
+- Do not use social engineering, phishing, spam, physical attacks, or third-party attacks.
+- Keep the vulnerability confidential until Phala has resolved it and authorized disclosure.
+
+## What We Promise
+
+- We will acknowledge receipt of your report within 3 business days.
+- Full technical assessment, remediation, and any bounty decision may take longer depending on complexity, severity, affected systems, and remediation requirements.
+- If you follow this policy, we will not take legal action against you in regard to the report.
+- We will handle your report with strict confidentiality and will not pass on your personal details to third parties without your permission.
+- We will keep you informed of material progress where practical.
+- We will tell you whether the report is accepted as a valid security issue or denied because it is out of scope, not reproducible, already known, or does not demonstrate qualifying security impact.
+- In public information concerning the reported issue, we will credit you as the discoverer unless you prefer otherwise.
+- As a token of our gratitude, we offer rewards for accepted reports of security issues that were not yet known to us. The type and amount of any reward are determined based on severity, impact, exploitability, report quality, and remediation complexity.
 
 | Severity: | Critical | High     | Medium   | Low       |
 | --------- | -------- | -------- | -------- | --------- |
@@ -35,10 +66,4 @@ This Responsible Disclosure program, Bug Bounty program, and any listed rewards 
 
 Reward amounts will be determined only at the end of remediation of the disclosed issue. Actual reward amounts may exceed $15,000 or be as low as $1. The SYSOPS / CERT Team will provide their assessment and recommendation regarding severity or regarding reward amount but the final decision is solely at the discretion of the Phala Team.
 
-We strive to resolve all problems as quickly as possible, and we would like to play an active role in the ultimate publication of the problem after it is resolved.
-
-## Scoping
-
-- Core blockchain runtime & client
-- Websites: homepage, forum, Phala web apps, wiki, etc
-- Computing subsystem: pherry, runtime-bridge, helper scripts
+We strive to resolve valid security issues as quickly as practical and would like to play an active role in any publication of the issue after it is resolved.
