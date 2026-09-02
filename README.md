@@ -76,4 +76,4 @@ Please refer to [the run scripts](./scripts/run)
 - [Docs](https://docs.phala.network): Phala Network Documentations
 - [Security Audit](./audit): Audit reports
 - [phala-docker](https://github.com/Phala-Network/phala-docker): The production dockerfiles, including the blockchain, pherry, and pRuntime.
-- [Responsible Disclosure](./docs/responsible-disclosure.md)
+- [Responsible Disclosure](./docs/responsible-disclosure.md): moved to the [Phala Cloud policy](https://github.com/Phala-Network/phala-cloud/blob/main/SECURITY.md); this repository is retired
